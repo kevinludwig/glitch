@@ -1,6 +1,4 @@
-export default (state, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
-};
+import {combineReducers} from 'redux-immutable';
+
+export default combineReducers({});
+

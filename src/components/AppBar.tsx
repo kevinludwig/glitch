@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 export default () => {
-    const classes = useStyles();
+    const classes = useStyles({});
     return (
         <div className={classes.root}>
             <MuiAppBar position='static'>
