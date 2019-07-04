@@ -1,6 +1,14 @@
 ### Glitch
 
-Typescript, Webpack, React, Redux, and Material-UI starter
+Standard setup for:
+
+* Webpack
+* React
+* React-router-dom
+* Redux
+* Immutable.js
+* Typescript
+* Material-UI
 
 ### Setup
 
