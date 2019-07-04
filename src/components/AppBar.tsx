@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import MuiAppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default () => {
     const classes = useStyles({});
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleOpen = useCallback(() => setOpen(true), []);
+    const handleClose = useCallback(() => setOpen(false), []);
 
     return (
         <div className={classes.root}>
