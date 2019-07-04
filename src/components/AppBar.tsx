@@ -1,10 +1,12 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import MuiAppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import {Theme, makeStyles} from '@material-ui/core/styles';
+
+import NavMenu from 'components/NavMenu';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
@@ -20,6 +22,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export default () => {
     const classes = useStyles({});
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     return (
         <div className={classes.root}>
             <MuiAppBar position='static'>
@@ -27,7 +33,8 @@ export default () => {
                     <IconButton
                         className={classes.button}
                         edge='start'
-                        color='inherit'>
+                        color='inherit'
+                        onClick={handleOpen}>
                         <MenuIcon />
                     </IconButton>
                     <Typography variant='h6' className={classes.title}>
@@ -35,6 +42,7 @@ export default () => {
                     </Typography>
                 </Toolbar>
             </MuiAppBar>
+            <NavMenu open={open} onClose={handleClose} />
         </div>
     );
 };

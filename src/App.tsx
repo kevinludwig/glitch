@@ -4,6 +4,7 @@ import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 
 import AppRoutes from './AppRoutes';
+import PageLayout from 'components/PageLayout';
 
 interface IProps {
     store: any;
@@ -15,7 +16,9 @@ export default (props: IProps) => {
     return (
         <Provider store={props.store}>
             <ThemeProvider theme={theme}>
-                <AppRoutes />
+                <PageLayout>
+                    <AppRoutes />
+                </PageLayout>
             </ThemeProvider>
         </Provider>
     );
