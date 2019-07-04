@@ -1,15 +1,12 @@
 import * as React from 'react';
 
-import Layout from 'components/Layout';
+import PageLayout from 'components/PageLayout';
 
-class NotFound extends React.Component {
-    public render () {
-        return (
-            <Layout>
-                <p>Page Not Found</p>
-            </Layout>
-        );
-    }
+export default () => {
+    return (
+        <PageLayout>
+            <p>Page Not Found</p>
+        </PageLayout>
+    );
 }
 
-export default NotFound;

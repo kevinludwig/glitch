@@ -1,15 +1,12 @@
 import * as React from 'react';
 
-import Layout from 'components/Layout';
+import PageLayout from 'components/PageLayout';
 
-class Home extends React.Component {
-    public render () {
-        return (
-            <Layout>
-                <p>Hello World</p>
-            </Layout>
-        );
-    }
+export default () => {
+    return (
+        <PageLayout>
+            <p>Hello World</p>
+        </PageLayout>
+    );
 }
 
-export default Home;

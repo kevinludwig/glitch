@@ -1,22 +1,23 @@
 import * as React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {createMuiTheme} from '@material-ui/core/styles';
+import {ThemeProvider} from '@material-ui/styles';
 
-import ScrollToTop from 'components/ScrollToTop';
-import Home from 'components/pages/Home';
-import NotFound from 'components/pages/NotFound';
+import AppRoutes from './AppRoutes';
 
-class App extends React.Component {
-    public render () {
-        return (
-            <BrowserRouter>
-                <ScrollToTop>
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route component={NotFound} />
-                    </Switch>
-                </ScrollToTop>
-            </BrowserRouter>
-        );
-    }
+interface IProps {
+    store: any;
 }
-export default App;
+
+const theme = createMuiTheme();
+
+export default (props: IProps) => {
+    return (
+        <Provider store={props.store}>
+            <ThemeProvider theme={theme}>
+                <AppRoutes />
+            </ThemeProvider>
+        </Provider>
+    );
+}
+
