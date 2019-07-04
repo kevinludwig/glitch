@@ -3,7 +3,7 @@
 Standard setup for:
 
 * Webpack
-* React
+* React + Hooks
 * React-router-dom
 * Redux
 * Immutable.js
