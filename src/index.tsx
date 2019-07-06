@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 import configureStore from './store';
 
-import App from './App';
+import App from 'components/App';
 
 const store = configureStore();
 

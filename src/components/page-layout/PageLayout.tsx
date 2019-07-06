@@ -1,5 +1,5 @@
 import * as React from 'react';
-import AppBar from 'components/AppBar';
+import AppBar from './AppBar';
 
 interface IProps {
     children: React.ReactNode;

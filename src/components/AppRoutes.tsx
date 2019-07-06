@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import ScrollToTop from 'components/ScrollToTop';
+import ScrollToTop from 'components/page-layout/ScrollToTop';
 import Home from 'components/pages/Home';
 import NotFound from 'components/pages/NotFound';
 

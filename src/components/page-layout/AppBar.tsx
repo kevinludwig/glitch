@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import {Theme, makeStyles} from '@material-ui/core/styles';
 
-import NavMenu from 'components/NavMenu';
+import NavMenu from './NavMenu';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
