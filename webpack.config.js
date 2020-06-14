@@ -1,6 +1,6 @@
 const path = require('path'),
     {CleanWebpackPlugin} = require('clean-webpack-plugin'),
-    UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
+    TerserPlugin = require('terser-webpack-plugin'),
     CompressionWebpackPlugin = require('compression-webpack-plugin'),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -43,7 +43,7 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 cache: true,
                 parallel: true,
                 sourceMap: true
